@@ -1,0 +1,7 @@
+- [타겟 넘버 (Level 2)](https://school.programmers.co.kr/learn/courses/30/lessons/43165)
+- [네트워크 (Level 3)](https://school.programmers.co.kr/learn/courses/30/lessons/43162)
+- [게임 맵 최단거리 (Level 2)](https://school.programmers.co.kr/learn/courses/30/lessons/1844)
+- [단어 변환 (Level 3)](https://school.programmers.co.kr/learn/courses/30/lessons/43163)
+- [아이템 줍기 (Level 3)](https://school.programmers.co.kr/learn/courses/30/lessons/87694)
+- [여행경로 (Level 3)](https://school.programmers.co.kr/learn/courses/30/lessons/43164)
+- [퍼즐 조각 채우기 (Level 3)](https://school.programmers.co.kr/learn/courses/30/lessons/84021)

@@ -1,0 +1,3 @@
+- [가장 먼 노드 (Level 3)](https://school.programmers.co.kr/learn/courses/30/lessons/49189)
+- [순위 (Level 3)](https://school.programmers.co.kr/learn/courses/30/lessons/49191)
+- [방의 개수 (Level 5)](https://school.programmers.co.kr/learn/courses/30/lessons/49190)

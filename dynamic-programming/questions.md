@@ -1,0 +1,5 @@
+- [N으로 표현 (Level 3)](https://school.programmers.co.kr/learn/courses/30/lessons/42895)
+- [정수 삼각형 (Level 3)](https://school.programmers.co.kr/learn/courses/30/lessons/43105)
+- [등굣길 (Level 3)](https://school.programmers.co.kr/learn/courses/30/lessons/42898)
+- [사칙연산 (Level 4)](https://school.programmers.co.kr/learn/courses/30/lessons/1843)
+- [도둑질 (Level 4)](https://school.programmers.co.kr/learn/courses/30/lessons/42897)
