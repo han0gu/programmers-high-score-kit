@@ -1,17 +1,18 @@
 # 문제 풀이
 
 ## 🎯 접근 전략
-- 
+- sorted + custom compare function
+  ![alt text](image.png)
 
 ---
 
 ## ✅ 테스트 결과
-- 정답률: 80% (8/10)
+![alt text](image-2.png)
 
 ---
 
 ## ⚠️ Edge Case
-- 
+- 잘 모르겠음.
 
 ---
 
