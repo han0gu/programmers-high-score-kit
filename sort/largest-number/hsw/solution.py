@@ -7,4 +7,5 @@ def compare(a: int, b: int):
 
 def solution(numbers):
     reversed = sorted(numbers, key=cmp_to_key(compare))
-    return "".join([str(n) for n in reversed])
+    result = "".join([str(n) for n in reversed])
+    return str(int(result)) if result else result
