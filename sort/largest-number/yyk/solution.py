@@ -27,14 +27,55 @@ def solution(numbers):
     # numbers = numbers[::-1]
     #테스트2 303-->330되야함
     # numbers = sorted(numbers, key= str, reverse = True)
-    numbers = sorted(numbers, key= lambda x: (str(x)[0],len(str(x)),x) ,reverse = True)
+    # numbers = sorted(numbers, key= lambda x: (str(x)[0],len(str(x)),x) ,reverse = True)
+    numbers = sorted(numbers, key= lambda x: str(x)*3 ,reverse = True)
     # return numbers
     # return numbers   #[3,30,34,5,9] ->리버스하면  [9,5,34,30,3]
     # i = 0
     for i in range(len(numbers)):
         answer += str(numbers[i]) #answer 는 문자열받는데, numbers는 정수값이라 못받아서 문자변환
     
-    if len(answer) == 0 : return 0
+    if int(answer) == 0 : return 0
     if len(answer) != 0 : return answer
 
     # return answer
+
+
+
+
+
+"""method 1"""
+
+def solution(numbers):
+    answer = ''
+    numbers = sorted(numbers, key= lambda x: str(x)*3 ,reverse = True)
+    
+    for i in range(len(numbers)):
+        answer += str(numbers[i])
+        
+    if int(answer) == 0 : return str(int(answer))
+    if len(answer) != 0 : return str(int(answer))
+
+
+"""method 2"""
+from functools import cmp_to_key
+
+def solution(numbers):
+    answer = ''
+    
+    def compare(a,b):
+        if str(a)+str(b) > str(b)+str(a): #ab가 ba 보다 크면 a가 앞
+            return -1
+        else:
+            return 1
+
+
+    numbers = sorted(numbers, key = cmp_to_key(compare))
+    
+    for i in range(len(numbers)):
+        answer += str(numbers[i])
+    if answer == 0 : return str(int(answer))
+    if len(answer) != 0 : return str(int(answer))
+
+#엣지케이스 000 일때!
+#정수 변환 후 문자열 변환하여 0을 answer가 갖도록함
