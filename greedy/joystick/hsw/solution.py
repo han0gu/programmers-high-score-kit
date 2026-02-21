@@ -24,14 +24,14 @@ def count_left_right(name: str):
     pattern = r"[^A]"
 
     matches_right = list(re.finditer(pattern, name))
-    print("matches_right", matches_right)
+    # print("matches_right", matches_right)
     right = matches_right[-1].end()
-    print("right:", right)
+    # print("right:", right)
 
     matches_left = list(re.finditer(pattern, name[::-1]))
-    print("matches_left", matches_left)
+    # print("matches_left", matches_left)
     left = matches_left[-1].end()
-    print("left:", left)
+    # print("left:", left)
 
     return min(left, right)
 
