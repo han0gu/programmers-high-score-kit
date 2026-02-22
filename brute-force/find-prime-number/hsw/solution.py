@@ -1,46 +1,34 @@
-from typing import List
+from itertools import permutations
 
 
 def solution(numbers: str):
-    print("numbers", numbers)  # "0321589"
-    answer = 0
+    all_cases = create_all_cases(numbers)
 
-    cases = create_all_cases(numbers)
+    primes = {c for c in all_cases if is_prime_number(c)}
 
-    for c in cases:
-        print(f"{c}: {is_prime_number(c)}")
-        if is_prime_number(c):
-            answer += 1
-
-    return answer
+    return len(primes)
 
 
-def create_all_cases(numbers: str):
-    cases: List[int] = []
+def create_all_cases(numbers: str) -> set:
+    all_cases: set = set()
 
-    splitted = [int(n) for n in numbers]
-    print("splitted", splitted)  # [0,3,2,1,5,8,9]
+    for i in range(len(numbers)):
+        cases = permutations(numbers, i + 1)
 
-    print("total cases:", len(cases))
-    return cases
+        for case in cases:
+            converted = int("".join(case))  # (0,1,1) -> "011" -> 11
+            all_cases.add(converted)
+
+    return all_cases
 
 
-def is_prime_number(num: int):
-    if num == 1 or num == 2:
+def is_prime_number(num: int) -> bool:
+    if num < 2:
+        return False
+    if num == 2:
         return True
 
     for div in range(2, num):
         if num % div == 0:
             return False
     return True
-
-
-numbers = "17"
-# numbers = "011"
-# numbers = "0321589"
-
-# 단위 테스트
-# create_binary_list(numbers)
-
-# 통합 테스트
-print("answer:", solution(numbers))
