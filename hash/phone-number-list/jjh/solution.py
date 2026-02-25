@@ -11,18 +11,35 @@
 #     return answer
 
 # 2차 풀이
+# def solution(phone_book):
+#     answer = True
+#     n = len(phone_book)
+#     phone_book.sort()
+#     i = 0
+#     while i + 1 < n:
+#         if phone_book[i] in phone_book[i+1]:
+#             answer = False
+#             break
+#         i += 1
+
+#     return answer
+
+
+# 3차 풀이
 def solution(phone_book):
     answer = True
     n = len(phone_book)
     phone_book.sort()
     i = 0
     while i + 1 < n:
-        if phone_book[i] in phone_book[i+1]:
+        phone1_n = len(phone_book[i])
+        phone2_n = phone_book[i+1][:phone1_n + 1]
+        if phone_book[i] in phone2_n:
             answer = False
             break
         i += 1
 
     return answer
 
-# x = ["123","456","789"]
-# print(solution(x))
+x = ["123","456","789"]
+print(solution(x))
