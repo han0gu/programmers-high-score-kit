@@ -3,8 +3,34 @@
 ## 🎯 접근 전략
 
 - 두 수를 선택한 후, 순서를 바꿔가며 접두어 여부를 확인한다.
+
+### try 1
+- 접두어 여부 확인 함수
+    ```python
+    def is_dup(num1: str, num2: str):
+        return num2.startswith(num1) or num1.startswith(num2)
+    ```
 - 테스트 결과
-    ![alt text](image.png)
+    - 성능 테스트 통과 실패
+        ![alt text](try1.png)
+
+### try 2
+- 접두어 여부 확인 함수
+    ```python
+    def is_dup(num1: str, num2: str):
+        len1: int = len(num1)
+        len2: int = len(num2)
+
+        if len1 < len2:
+            return num2.startswith(num1)
+        elif len1 > len2:
+            return num1.startswith(num2)
+        else:
+            return num1 == num2
+    ```
+- 테스트 결과
+    - 비교 횟수 감소를 통해 성능 개선 시도하였으나 여전히 성능 테스트 통과 실패
+        ![alt text](try2.png)
 
 ---
 
