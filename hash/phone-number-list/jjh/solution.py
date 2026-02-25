@@ -26,6 +26,22 @@
 
 
 # 3차 풀이
+#def solution(phone_book):
+    #answer = True
+    #n = len(phone_book)
+    #phone_book.sort()
+    #i = 0
+    #while i + 1 < n:
+        #phone1_n = len(phone_book[i])
+        #phone2_n = phone_book[i+1][:phone1_n + 1]
+        #if phone_book[i] in phone2_n:
+            #answer = False
+            #break
+        #i += 1
+
+    #return answer
+    
+# 4차 풀이 -> 패스
 def solution(phone_book):
     answer = True
     n = len(phone_book)
@@ -33,13 +49,14 @@ def solution(phone_book):
     i = 0
     while i + 1 < n:
         phone1_n = len(phone_book[i])
-        phone2_n = phone_book[i+1][:phone1_n + 1]
+        phone2_n = phone_book[i+1][:phone1_n]
         if phone_book[i] in phone2_n:
             answer = False
             break
         i += 1
 
     return answer
+
 
 x = ["123","456","789"]
 print(solution(x))
