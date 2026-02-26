@@ -5,8 +5,8 @@ def solution(phone_book):
     shortest=20
     longest=0
     for p in phone_book:
-        if len(p) < shortest: shortest = len(p)
-        if len(p) > longest: longest = len(p)
+        shortest = min(shortest, len(p)) #if len(p) < shortest: shortest = len(p)
+        longest = max(longest, len(p))   #if len(p) > longest: longest = len(p)
 
     if shortest==longest: return True
     
@@ -58,3 +58,19 @@ def solution(phone_book):
 
     return True
 """
+
+def solution2(phone_book: list[str]):
+    # dict의 key-value에 집착하지 않은 'Hash'에 집중한 구현
+    phone_dict = {k: True for k in phone_book}
+    for num in phone_book:
+        if len(num) == 1:
+            continue
+        prefix = ''
+        for n in num[:-1]:
+            prefix += n
+            if phone_dict.get(prefix):
+                return False
+    return True
+
+for k, v in tc.items():
+    print(solution2(v))
