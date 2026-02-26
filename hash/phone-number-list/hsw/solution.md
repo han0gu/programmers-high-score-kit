@@ -103,3 +103,5 @@ len(phone_book) = n
 - 내가 느끼는 문제 난이도: 4
     - brute-force 접근 전략을 떠올리는 것은 쉽다.
     - 성능 개선 방법이 즉시 떠오르지는 않았다.
+- 기타
+    - Gemini Code Assist의 리뷰가 기대된다 !
