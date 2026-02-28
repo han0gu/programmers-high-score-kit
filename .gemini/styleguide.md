@@ -21,7 +21,21 @@ Review each member's `solution.py` and `solution.md` with a sharp but respectful
 ### 4. Performance edge-case hint
 - Warn about potential time-limit risks based on algorithmic structure.
 
+### 5. Import Statement Exceptions
 
+In competitive programming environments (e.g., Programmers.co.kr), all logic is often required to be encapsulated within a single `solution` function.
+
+* **Function-Level Imports:** * Do **not** flag or apply PEP8 guidelines regarding "imports at the top of the file" when `import` statements are placed inside `def solution():`.
+* This is an intentional structure for platform compatibility.
+
+
+* **Standard Contexts:** * Continue to review and flag `import` statements if they appear after general variables or logic outside of the specific function-level scope.
+* Example of a violation:
+```python
+x = 10
+import math  # <--- This should be flagged (unless inside the solution function)
+
+```
 
 ## Hard constraints:
 - Do not generate or run test cases. Review only from provided code and documentation.
