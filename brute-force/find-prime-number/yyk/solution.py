@@ -36,7 +36,7 @@ def solution(numbers):
     
         # 2,3,5,7 10 미만의 소수의 배수를 제거하면 소수만 남을 것임
         
-
+#가독성, 익스텐션 적용하기, 주석지우는 등
     
        
     return len(result)
