@@ -28,5 +28,7 @@ def solution(clothes):
             answer *= (clothes_count + 1)
         return answer - 1
         #딕셔너리 키의 값을 +1 한것들을 모두 곱 -1
-
+        # +1은 안입는 경우를 포함하기 위함
+        # 곱셈은 모든 경우의 수를 구하기 위함
+        # -1은 모두 안입는 경우를 제외하기 위함
     return total_combinations(clothes)
