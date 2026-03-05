@@ -25,7 +25,7 @@ def solution(genres, plays):
     d_sum = sorted(d_sum.items(), key=lambda x: x[1], reverse=True)             # [('pop', 3100), ('classic', 1450)]
     
     for j in d_idx:
-        d_idx[j].sort(key=lambda x: x[1], reverse=True)                         # {'classic': [[3, 800], [0, 500], [2, 150]], 'pop': [[4, 2500], [1, 600]]}
+        d_idx[j].sort(key=lambda x: (-x[1], x[0]))                         # {'classic': [[3, 800], [0, 500], [2, 150]], 'pop': [[4, 2500], [1, 600]]}
     
     
     for k in range(int(len(d_sum))):
