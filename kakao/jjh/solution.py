@@ -15,6 +15,7 @@ def get_lcm(signals):
 # 2. 각 신호등 누적합 구하기
 def get_cumsum(signals):
     n = len(signals)
+    signals.sort(key=lambda x: x[1], reverse=True)
     lcm = get_lcm(signals)
     cumsum = []
     
@@ -53,7 +54,7 @@ def solution(signals):
 
 
 if __name__ == '__main__':
-    signals = [[1, 1, 1], [1, 2, 1], [2, 1, 1]] # [[2, 1, 2], [5, 1, 1]]
+    signals = [[1, 2, 1], [1, 1, 1], [2, 1, 1]] # [[2, 1, 2], [5, 1, 1]]
     print(solution(signals))
 
 # [[2, 1, 2], [5, 1, 1]]	13
