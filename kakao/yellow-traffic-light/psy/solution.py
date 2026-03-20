@@ -10,7 +10,8 @@ def solution(signals):
     # 각 신호는 최소 1초, 최대 18초
     # 신호등은 2 ~ 5개
     answer = -1
-    # [1사이클 주기, 첫 노랑불 타이밍, 노랑불 지속 시간] -> 시작과 끝(시작+지속시간)은 알 수 있음
+    # [1사이클 주기, 첫 노랑불 타이밍, 노랑불 지속 시간] 
+    # -> 시작과 끝(시작+지속시간)은 알 수 있음
     # 최소공배수 문제인가? --> 모듈러 정수론 문제
     pattern = defaultdict(list)
     for i, s in enumerate(signals):
@@ -25,7 +26,8 @@ def solution(signals):
             return -1
         
     # 일정 주기로 점멸하는 불빛 문제로 생각
-    # 시간 s에 최초로 켜진 상태이고 주기 c인 경우 -> 임의의 시간 t에 대해  t % c == s 일 때만 켜져 있음 ( s === t mod c )
+    # 시간 s에 최초로 켜진 상태이고 주기 c인 경우 
+    # -> 임의의 시간 t에 대해  t % c == s 일 때만 켜져 있음 ( s === t mod c )
     # 시간 t에 노란불일 조건: start <= t % cycle <= end
     
     cycles = [v[2] for v in pattern.values()]
